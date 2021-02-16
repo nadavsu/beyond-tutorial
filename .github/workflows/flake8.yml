@@ -4,7 +4,7 @@ jobs:
   flake8:
     name: Check code with Flake8
     runs-on: ubuntu-20.04
-    contained: fedora:32
+    container: fedora:32
     steps:
       - name: Install Pipenv and Git
         run: dnf install -y pipenv git
@@ -13,4 +13,4 @@ jobs:
       - name: Setup environmet
         run: pipenv sync --dev
       - name: Run Flake8
-        run: pipenv run flake8 --make-line-length 120
+        run: pipenv run flake8 --max-line-length 120
