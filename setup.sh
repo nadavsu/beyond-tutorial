@@ -7,8 +7,12 @@
 sudo -n dnf install -y pipenv
 
 cd /vagrant
+
 # Install dependencies with Pipenv
 pipenv sync --dev
+
+# Run database migrations
+pipenv run python manage.py migrate
 
 # run out app. Nohup and "&" are used to let the setup script finish
 # while our app stays up. The app lgs will be collected in nohup.out
