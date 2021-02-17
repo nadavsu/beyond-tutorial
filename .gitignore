@@ -130,3 +130,7 @@ dmypy.json
 
 # Vagrant
 .vagrant/
+
+# Other files
+.DS_Store
+nohup.out
